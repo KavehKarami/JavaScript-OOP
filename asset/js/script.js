@@ -56,6 +56,7 @@ try{
     const another = new Circle(2);
     another.defaultLocation.z = 100 ;
     console.log(another);
+    console.log(another.draw());
     console.log(another.defaultLocation);
 }
 catch (e) {
