@@ -52,9 +52,14 @@ function Circle(radius = 1) {
     });
 }
 
-const another = new Circle(2);
-another.defaultLocation.y = 100 ;
-console.log(another);
-console.log(another.defaultLocation);
+try{
+    const another = new Circle(2);
+    another.defaultLocation.z = 100 ;
+    console.log(another);
+    console.log(another.defaultLocation);
+}
+catch (e) {
+    console.log(`%c ${e.message}`,'color:#f33');
+}
 
 
