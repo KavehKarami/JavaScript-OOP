@@ -39,7 +39,7 @@ function Circle(radius = 1) {
             let key =Object.keys(defaultLocation);
             let keyJoin = key.join('');
 
-            if (keyJoin ==="x")
+            if (keyJoin ==="xy")
                 return defaultLocation;
             else
                 throw new Error('invalid key')
