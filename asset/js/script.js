@@ -24,7 +24,7 @@ function Circle(radius = 1) {
     //     return defaultLocation;
     // };
 
-    //age khasti line 36 ta 40 ro az comment dar biari line 27 ta 33 ro comment kon ta asaresh ro bebini
+    //age khasti line 28 ta 36 ro comment kon ta betooni az set estefade koni
     defaultLocation = {};
     Object.defineProperty(defaultLocation,"x", {
         enumerable: true,
@@ -54,7 +54,7 @@ function Circle(radius = 1) {
 
 try{
     const another = new Circle(2);
-    another.defaultLocation.z = 100 ;
+    another.defaultLocation.y = 100 ;
     console.log(another);
     console.log(another.draw());
     console.log(another.defaultLocation);
