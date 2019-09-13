@@ -13,7 +13,8 @@ console.log(another);
 
 */
 
-function Circle(radius ) {
+function Circle(radius = 1) {
+    //be in soorat private mikonim
     let number = radius;
     this.draw = ()=> number;
 }
