@@ -36,7 +36,7 @@ function Circle(radius = 1) {
     });
     Object.defineProperty(this,'defaultLocation',{
         get(){
-            let key =Object.keys(defaultLocation);
+            let key = Object.keys(defaultLocation);
             let keyJoin = key.join('');
 
             if (keyJoin ==="xy")
