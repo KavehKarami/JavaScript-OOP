@@ -66,3 +66,10 @@ for (let key in ow)
 
 console.log(ow.hasOwnProperty("radius"));
 console.log(ow.hasOwnProperty("draw"));
+
+
+Array.prototype.Kaveh = ()=>{
+    //...
+};
+const array = [];
+array.Kaveh();
