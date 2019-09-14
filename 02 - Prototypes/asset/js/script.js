@@ -19,3 +19,39 @@ console.log(arr);
 console.log(HelloWorld.prototype);
 console.log(Array.prototype);
 console.log(Object.prototype);
+
+
+function OverWrite(radius) {
+    this.radius = radius;
+    this.move = ()=>{console.log('move')}
+}
+
+//inja man natoonestam az arrow function estefade konam . nemidunam chera!!
+OverWrite.prototype.draw = function(){
+    this.move();
+    console.log("draw");
+};
+
+//inja ham natoonestam az arrow function estefade konam;
+OverWrite.prototype.toString = function(){return `radius = ${this.radius}`};
+
+const ow = new OverWrite(2);
+ow.draw();
+console.log(ow.toString());
+
+
+// function OverWrite(radius) {
+//     this.radius = radius;
+//     this.move = ()=>{
+//         this.draw();
+//         console.log('move')
+//     }
+// }
+//
+// OverWrite.prototype.draw = ()=>{console.log("draw");};
+//
+// OverWrite.prototype.toString = function(){return `radius = ${this.radius}`};
+//
+// const ow = new OverWrite(3);
+// ow.move();
+// console.log(ow.toString());
