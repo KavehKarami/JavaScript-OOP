@@ -55,3 +55,14 @@ console.log(ow.toString());
 // const ow = new OverWrite(3);
 // ow.move();
 // console.log(ow.toString());
+
+
+//return Instance(ownProperty) members
+console.log(Object.keys(ow));
+
+//return all members (ownProperty + prototype)
+for (let key in ow)
+    console.log(key);
+
+console.log(ow.hasOwnProperty("radius"));
+console.log(ow.hasOwnProperty("draw"));
