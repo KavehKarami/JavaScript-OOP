@@ -101,3 +101,20 @@ class declare{
 const d = new declare('Kasra');
 console.log(d);
 d.draw();
+
+const _number = new WeakMap();
+class GetterAndSetter{
+    constructor(radius){
+        _number.set(this,radius);
+    }
+    get showNum(){
+        return _number.get(this)
+    }
+    set showNum(value){
+        return _number.set(this,value)
+    }
+}
+const gw = new GetterAndSetter(1);
+console.log(gw.showNum);
+gw.showNum = 3;
+console.log(gw.showNum);
