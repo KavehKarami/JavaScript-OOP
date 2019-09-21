@@ -19,8 +19,8 @@ function hello(str) {
 }
 
 //function expression
-const name = (str)=>{console.log(str)};
-name("Kaveh");
+const hi = (str)=>{console.log(str)};
+hi("Kaveh");
 
 //class declaration
     //line 1 to 9
@@ -71,3 +71,33 @@ const st = new SomeThing(1);
 console.log(st);
 console.log(st[_draw]());
 console.log(st[_size]);
+
+
+const _move = new WeakMap();
+const _name = new WeakMap();
+// const privateProps = new WeakMap();
+class declare{
+    constructor(name){
+        _name.set(this,name);
+
+        _move.set(this,()=>{
+            console.log(_name.get(this));
+            console.log(this);
+        });
+
+        // privateProps.set(this,{
+        //     name,
+        //     solve(){
+        //         //..
+        //     }
+        // });
+        // privateProps.get(this).name;
+    }
+    draw(){
+        //inja move choon function hast yek () jelosh mizarim ke ejra ham beshe
+        _move.get(this)();
+    }
+}
+const d = new declare('Kasra');
+console.log(d);
+d.draw();
