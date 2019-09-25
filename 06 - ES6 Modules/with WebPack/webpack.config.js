@@ -14,6 +14,8 @@ const webpack = require('webpack');
  *
  */
 
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 /*
  * We've enabled HtmlWebpackPlugin for you! This generates a html
  * page for you when you compile webpack, which will make you start
@@ -29,7 +31,7 @@ module.exports = {
 
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'src/es5')
+		path: path.resolve(__dirname, 'src/es5/')
 	},
 
 	plugins: [new webpack.ProgressPlugin()],
