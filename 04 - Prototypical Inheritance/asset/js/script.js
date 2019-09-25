@@ -30,7 +30,7 @@ Circle.prototype.duplicate = ()=>{
 const s = new Shape();
 const c = new Circle(1,"red");
 
-console.log(c.constructor);
+console.log(c);
 
 c.duplicate();
 console.log(c.color);
